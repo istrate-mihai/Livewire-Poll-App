@@ -1,22 +1,24 @@
 [phases.setup]
 aptPkgs = [
+    "php8.2",
     "php8.2-mysql",
     "php8.2-pdo",
     "php8.2-mbstring",
-    "php8.2-xml",
     "php8.2-bcmath",
-    "php8.2-curl",
     "php8.2-zip",
+    "php8.2-xml",
+    "php8.2-curl",
     "php8.2-gd",
-    "php8.2-intl",
-    "php8.2-sqlite3"  # Optional but good to have
+    "composer",
+    "nodejs",
+    "npm"
 ]
 
 [phases.install]
 cmds = [
-    "composer install --optimize-autoloader --no-dev",
+    "composer install --optimize-autoloader --no-dev --no-interaction",
     "php artisan key:generate --force",
-    "php artisan storage:link --force"
+    "npm install && npm run build"
 ]
 
 [start]
