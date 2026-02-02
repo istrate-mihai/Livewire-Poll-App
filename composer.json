@@ -13,7 +13,9 @@
         "laravel/framework": "^10.0",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "livewire/livewire": "2.12.*"
+        "livewire/livewire": "2.12.*",
+        "symfony/css-selector": "^6.0 || ^7.0",
+        "tijsverkoyen/css-to-inline-styles": "2.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
